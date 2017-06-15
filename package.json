@@ -2,7 +2,7 @@
     "name": "chuckhendo-vscode-extensions",
     "displayName": "chuckhendo-vscode-extensions",
     "description": "Visual Studio Code Extensions that I (chuckhendo) use",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "chuckhendo",
     "engines": {
         "vscode": "^1.13.0"
@@ -10,16 +10,16 @@
     "categories": [
         "Extension Packs"
     ],
-    "extensionDependencies": [ 
-        "Zignd.html-css-class-completion", 
-        "christian-kohler.npm-intellisense", 
-        "christian-kohler.path-intellisense", 
-        "dkundel.vscode-new-file", 
-        "donjayamanne.githistory", 
-        "formulahendry.auto-close-tag", 
-        "formulahendry.code-runner", 
-        "michelemelluso.gitignore", 
-        "msjsdiag.debugger-for-chrome", 
+    "extensionDependencies": [
+        "Zignd.html-css-class-completion",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "dkundel.vscode-new-file",
+        "donjayamanne.githistory",
+        "formulahendry.auto-close-tag",
+        "formulahendry.code-runner",
+        "michelemelluso.gitignore",
+        "msjsdiag.debugger-for-chrome",
         "ryu1kn.annotator"
     ]
 }
