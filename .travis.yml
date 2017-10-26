@@ -1,0 +1,24 @@
+after_success:
+- npm install -g vsce;
+- vsce package;
+deploy:
+  provider: releases
+  api_key:
+    secure: cJ1+29dBWN1bn15jdjABiSAjk7hoUKFwOJL4nLt6EmNtEW5bflVg/YKb1RNyQwabTQACLwmBwfEICI+jYenWmEUSfCgqcW4Wfx457WTK1h2Mnc2a4l0D8I4DvURXyh+SYz+Q7aqQH7R5ZjQIo0Kb9jl/p54MzQ2tgNuc/gKrGn9WQCWzoq1PgWFTAWV0DYZhFLEWErfFBTtS3H9EIDuZdj4lFl/5f2dmHSWA4iKiDoP2/RZeLxck5jEPODJ7e1SWVoAhFOMNCdsOpPYSxwCHV0op+H538mfiHdcf7JJ5daPsVeoCvyak/hgiAkTmchLm2u/edZ86jGQSETG+fV0S++UP+ALtG7eGa0yrGCXLKFtUoKjvlHyT2AyorxMj5xgJ7KlPaQPfVj9G+O9YmTG9Hh10C36+3bNA+NNkFY8LSrFWveKcC+3iU70WBEFPV4UUCbtYs69pIUqOTF4TA45wddFSIJGhXhwhLmGEfXeAGm0VqE5V7lSNw0BpepzH5+Dql44H1JDip5WdGeYORP37xfVgY0GxU4cApDAQrjX8iSCuV9AWktreazyy0RE8Q1QFRoSG5FdRpxE/n8KZ01vxTO4+/abcQ/nKS7dp1nz596eQ9Zwj7fXKO7Gs3LNyX/QFzUomD0kZUQ+pO8KDIBpd4HHa7EzZ1BazT7kGS1tb6BI=
+  fileglob: true
+  file: "*.vsix"
+  on:
+    repo: chuckhendo/chuckhendo-vscode-extensions
+    tags: true
+- provider: script
+  script: vsce publish -p $VS_TOKEN
+  skip_cleanup: true
+  on:
+    repo: chuckhendo/chuckhendo-vscode-extensions
+    tags: true
+env:
+  global:
+    secure: EGXwDcuGTx6liloCePDYUJKgYdfoL2vxvttUbYugdvybVqp335PHdUotZA02zWjjzV4/WOp4Hbbd+UPKCB2IgWDLpFlLFQk6gdrqwPWrFFpzBdtuizRe1j8YuZaPdkZMBr6PlCQm/hwb96KxfPQSjjrJzDrQN5hJXTgzYPJv0ch01VFoVN2XAGNRop2Vvhe8TJQSgYULRW2Jb3ifqryLqZ5CNm5Pv4Cm/v7BviaUROm6v+FEX0Uf4knbF9UvOYUHdxkeyLb/nx9annS5kB99uJ0/3TC0jmG6u9tm3Fut0OdPwsp5Gd1ot1yB7ycZ+YUkhgcqnZM+oySTkLQPqDRn5lhCkTaggmCkZBYgxXJDNhqYK1MQofEy8RCjnMHOetp/XBVszsJAvGSmJdVGGUHCTdqrAbK+1cjO/AIkHbbJ7Q01G+WXgFvsVYFYfvk1TcXnCWfWLXlCbKClkFqJTLcaWq4whFa+g4FYFMTNVhTGSicHxYc2RWrkFy8ODMt9ZOyCmgMMTZB4grJe0xhna4CSqaNiapOrbPFDNZogTiq9HpZ1VHApM7chfs7t7ewIFdr0TDlPA4hCYJDICZaE+oleawD9Un3YyQfFw6tBUcT+Zsvg4dhiJrs6VbQsjyMQV9lOMSuR/ugLrJ8rvzkOzNJRBu5g5pRxq9ekS3U2YvowS4A=
+
+
+
