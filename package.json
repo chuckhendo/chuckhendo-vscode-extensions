@@ -2,7 +2,7 @@
     "name": "chuckhendo-vscode-extensions",
     "displayName": "chuckhendo-vscode-extensions",
     "description": "Visual Studio Code Extensions that I (chuckhendo) use",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "chuckhendo",
     "engines": {
         "vscode": "^1.13.0"
@@ -12,7 +12,6 @@
     ],
     "extensionDependencies": [
         "Zignd.html-css-class-completion",
-        "christian-kohler.npm-intellisense",
         "christian-kohler.path-intellisense",
         "dkundel.vscode-new-file",
         "donjayamanne.githistory",
